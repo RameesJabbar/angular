@@ -1,0 +1,25 @@
+
+<div class="body">
+<div class="example-container">
+    <mat-form-field> <input matInput
+      [(ngModel)]="titleModel" placeholder="Title"> </mat-form-field>
+      <br>
+  
+    <mat-form-field> <input matInput
+      [(ngModel)]="contentModel" placeholder="Description"> </mat-form-field>
+    <br>
+  </div>
+  
+  <br>
+  
+  <button class="button" mat-raised-button (click)="createQuicknotes()">
+    Add Note </button>
+    
+  
+  <br>
+  
+  <p *ngFor="let i of quicknotes">
+    <mat-card-title> {{ i.title }} </mat-card-title>
+    <mat-card> {{ i.content }} </mat-card>
+    <br>
+  </div>
